@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21200000}
   - 61: {fileID: 6100000}
   m_Layer: 0
-  m_Name: Platform
+  m_Name: LeftWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ GameObject:
   - 212: {fileID: 21200002}
   - 61: {fileID: 6100002}
   m_Layer: 0
-  m_Name: Platform
+  m_Name: RightWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ GameObject:
   - 212: {fileID: 21200004}
   - 61: {fileID: 6100004}
   m_Layer: 0
-  m_Name: Platform
+  m_Name: Ceiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,8 +76,8 @@ GameObject:
   - 4: {fileID: 400008}
   - 212: {fileID: 21200006}
   - 61: {fileID: 6100006}
-  m_Layer: 0
-  m_Name: Platform
+  m_Layer: 12
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
