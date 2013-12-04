@@ -114,7 +114,8 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 08c33b6a3b5064a9d98049faf9bd6f5f,
         type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6100000, guid: 3f305ce4a230a4ef09feaa0753c04000, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3f305ce4a230a4ef09feaa0753c04000, type: 2}
   m_RootGameObject: {fileID: 411455388}
   m_IsPrefabParent: 0
@@ -128,8 +129,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 411455391}
   - 212: {fileID: 411455390}
-  - 61: {fileID: 411455389}
   - 114: {fileID: 411455392}
+  - 61: {fileID: 411455389}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -140,14 +141,13 @@ GameObject:
 --- !u!61 &411455389
 BoxCollider2D:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6100000, guid: 3f305ce4a230a4ef09feaa0753c04000,
-    type: 2}
-  m_PrefabInternal: {fileID: 89248584}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 411455388}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: 5.07000017, y: 3.46000004}
+  m_IsTrigger: 0
+  m_Size: {x: 4.90999985, y: 2.38000011}
   m_Center: {x: 0, y: 0}
 --- !u!212 &411455390
 SpriteRenderer:
