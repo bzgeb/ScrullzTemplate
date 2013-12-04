@@ -224,6 +224,32 @@ Prefab:
   m_RootGameObject: {fileID: 1134659236}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &485532392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100002, guid: 96e1c026fab6e40cfa73a4338460f27f, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 485532393}
+  m_Layer: 0
+  m_Name: WallCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: -2065832391, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &485532393
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400002, guid: 96e1c026fab6e40cfa73a4338460f27f, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 485532392}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .75, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 946158261}
 --- !u!1 &561570437
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,6 +523,14 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ad46183090d2d40feae3614e0912c5fc, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ad46183090d2d40feae3614e0912c5fc, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad46183090d2d40feae3614e0912c5fc, type: 2}
   m_RootGameObject: {fileID: 230843460}
@@ -613,6 +647,7 @@ Transform:
   m_LocalScale: {x: .600000024, y: .600000024, z: 1}
   m_Children:
   - {fileID: 561570438}
+  - {fileID: 485532393}
   m_Father: {fileID: 0}
 --- !u!212 &946158262
 SpriteRenderer:
@@ -713,7 +748,7 @@ GameObject:
   - 4: {fileID: 1053053088}
   - 212: {fileID: 1053053087}
   - 61: {fileID: 1053053086}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LeftWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1041,7 +1076,7 @@ GameObject:
   - 4: {fileID: 1823301590}
   - 212: {fileID: 1823301592}
   - 61: {fileID: 1823301591}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: RightWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

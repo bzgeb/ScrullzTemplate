@@ -19,13 +19,16 @@ public class PlayerController : MonoBehaviour {
 
     private int tauntIndex;                  // The index of the taunts array indicating the most recent taunt.
     private Transform groundCheck;           // A position marking where to check if the player is grounded.
+    private Transform wallCheck;
     private bool grounded = false;           // Whether or not the player is grounded.
+    private bool againstWall = false;
     private Animator anim;                   // Reference to the player's animator component.
 
 
     void Awake() {
         // Setting up references.
         groundCheck = transform.Find( "GroundCheck" );
+        wallCheck = transform.Find( "WallCheck" );
         anim = GetComponent<Animator>();
     }
 
@@ -33,6 +36,15 @@ public class PlayerController : MonoBehaviour {
     void Update() {
         // The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
         grounded = Physics2D.Linecast( transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground") );
+
+        float h = Input.GetAxis( "Horizontal" );
+        
+        // againstWall = false;
+        // if ( h > 0 ) {
+        //     againstWall = Physics2D.Linecast( transform.position, rightWallCheck.position, 1 << LayerMask.NameToLayer("Ground") );
+        // } else if ( h < 0 ) {
+        //     againstWall = Physics2D.Linecast( transform.position, leftWallCheck.position, 1 << LayerMask.NameToLayer("Ground") ); 
+        // }
 
         // If the jump button is pressed and the player is grounded then the player should jump.
         if( Input.GetButtonDown( "Jump" ) && grounded ) {
@@ -44,6 +56,15 @@ public class PlayerController : MonoBehaviour {
     void FixedUpdate () {
         // Cache the horizontal input.
         float h = Input.GetAxis( "Horizontal" );
+
+        againstWall = false;
+        if ( (facingRight && h > 0.1f) || (!facingRight && h < -0.1f) ) {
+            againstWall = Physics2D.Linecast( transform.position, wallCheck.position, 1 << LayerMask.NameToLayer("Ground") );
+        }
+
+        if ( againstWall ) {
+            h = 0;
+        }
 
         // The Speed animator parameter is set to the absolute value of the horizontal input.
         anim.SetFloat( "Speed", Mathf.Abs( h ) );
