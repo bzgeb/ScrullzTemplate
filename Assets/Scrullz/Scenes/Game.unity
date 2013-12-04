@@ -673,12 +673,12 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 1477937934}
   m_GameObject: {fileID: 946158260}
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: .100000001
   m_AngularDrag: .0500000007
   m_GravityScale: 1
   m_FixedAngle: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
 --- !u!114 &946158266
@@ -696,7 +696,7 @@ MonoBehaviour:
   facingRight: 1
   jump: 0
   moveForce: 365
-  maxSpeed: 5
+  maxSpeed: 2.5
   jumpClips:
   - {fileID: 8300000, guid: 50a8d8a939a0f4e77a0dac6ecd2e582b, type: 3}
   jumpForce: 500
@@ -908,11 +908,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 96e1c026fab6e40cfa73a4338460f27f, type: 2}
       propertyPath: maxSpeed
-      value: 5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 96e1c026fab6e40cfa73a4338460f27f, type: 2}
       propertyPath: jumpForce
       value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000000, guid: 96e1c026fab6e40cfa73a4338460f27f, type: 2}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000000, guid: 96e1c026fab6e40cfa73a4338460f27f, type: 2}
+      propertyPath: m_LinearDrag
+      value: .100000001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 96e1c026fab6e40cfa73a4338460f27f, type: 2}
