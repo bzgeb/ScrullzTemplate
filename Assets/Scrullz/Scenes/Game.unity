@@ -84,6 +84,7 @@ GameObject:
   - 4: {fileID: 584868068}
   - 212: {fileID: 584868067}
   - 61: {fileID: 584868066}
+  - 95: {fileID: 584868069}
   m_Layer: 0
   m_Name: Scrull
   m_TagString: Untagged
@@ -138,6 +139,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!95 &584868069
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 584868065}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d98ca6a54b29a4eef934a2ace0135c49, type: 2}
+  m_CullingMode: 0
+  m_ApplyRootMotion: 0
+  m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
 --- !u!1 &832026136
 GameObject:
   m_ObjectHideFlags: 0
