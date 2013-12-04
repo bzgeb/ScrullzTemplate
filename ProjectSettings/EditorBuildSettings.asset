@@ -9,3 +9,5 @@ EditorBuildSettings:
     path: Assets/Scrullz/Scenes/Menu.unity
   - enabled: 1
     path: Assets/Scrullz/Scenes/Game.unity
+  - enabled: 1
+    path: Assets/Scrullz/Scenes/GameOver.unity
